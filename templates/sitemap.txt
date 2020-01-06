@@ -1,0 +1,3 @@
+$root$
+$for(pages)$$root$$url$
+$endfor$

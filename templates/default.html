@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  $if(metaDesc)$$metaDesc$$endif$
+  <title>
+    $if(startpage)$Christoffer Kaltenbrunner$else$$title$ | Christoffer Kaltenbrunner$endif$
+  </title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="../">Christoffer Kaltenbrunner</a></h1>
+    $if(startpage)$$else$<h2>$title$</h2>$endif$
+  </header>
+  <article>
+    $body$
+  </article>
+  </body>
+</html>
