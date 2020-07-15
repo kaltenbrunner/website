@@ -1,18 +1,22 @@
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.List              (isSuffixOf)
-import           Data.Monoid            (mappend)
-import           System.FilePath.Posix  (takeBaseName,takeDirectory
-                                         ,(</>),dropExtension)
-import           Control.Monad          (forM_)
-import           Hakyll
+
+import Data.List (isSuffixOf)
+import Data.Monoid (mappend)
+import System.FilePath.Posix (takeBaseName,takeDirectory,(</>),dropExtension)
+import Control.Monad (forM_)
+import Hakyll
+
 --------------------------------------------------------------------------------
+
 siteTitle :: String
 siteTitle = "Christoffer Kaltenbrunner"
 
 -- Root URL
 root :: String
 root = "https://christofferkaltenbrunner.com"
+
 --------------------------------------------------------------------------------
+
 main :: IO ()
 main = hakyll $ do
 
@@ -55,7 +59,9 @@ main = hakyll $ do
     -- Read templates
     match "templates/*" $
         compile templateBodyCompiler
+
 --------------------------------------------------------------------------------
+
 -- Context
 pageSitemapCtx :: Context String
 pageSitemapCtx =
@@ -69,9 +75,10 @@ metaDescContext = field "metaDesc" $ \item -> do
   -- else return <meta name="description" content="$description$">
   return $ maybe "" showMetaDesc desc
     where
-      showMetaDesc d = "<meta name=\"description\" content=\""
-                       ++ d ++ "\">"
+      showMetaDesc d = "<meta name=\"description\" content=\"" ++ d ++ "\">"
+
 --------------------------------------------------------------------------------
+
 -- Make URLs pretty
 prettyRoute :: Routes
 prettyRoute = customRoute $ \identifier ->
