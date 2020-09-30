@@ -29,4 +29,4 @@ programming, machine oriented programming and computer engineering.
 When I’m home I enjoy practicing yoga, strength training, running and spending
 time in nature.
 
-Also working on my new project [Slow Your Mind](https://slowyourmind.com).
+Also working on my new project [Mindinary](https://mindinary.com), helping people to [live more mindfully](https://mindinary.com/live-more-mindfully/).
